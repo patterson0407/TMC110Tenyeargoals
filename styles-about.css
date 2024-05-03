@@ -37,13 +37,18 @@ body {
 }
 
 .hero-section {
+    background-image: url('hero2.jpg'); /* Replace 'hero2.jpg' with the path to your hero image */
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: bolder;
+    font-weight: bold;
+    overflow: hidden; /* Ensure the overflow is hidden to prevent unwanted scrollbars */
+    position: relative; /* Ensure proper positioning of child elements */
 }
+
 
 .hero-section::before {
     content: "";
@@ -79,7 +84,7 @@ body {
 
 .profile-picture img {
     width: 400px;
-    height: 400px;
+    height: 600px;
     object-fit: cover;
     border: 5px solid #E9993Dff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -177,21 +182,6 @@ p{
     font-size: 25px;
 }
 
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 20px rgba(255, 253, 253, 0.4);
-}
-
-.carousel-caption {
-    top: 40%; 
-    opacity: .8;
-
-}
-
 footer {
     background-color: rgb(0, 0, 0);
     text-align: center;
@@ -202,5 +192,59 @@ footer {
 }
 
 
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    position: relative;
+    padding: 50px;
+    border-left: 2px solid #ccc;
+  }
+  
+  .date {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .content {
+    padding-left: 20px;
+  }
+  
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .career-goals,
+  .personal-goals {
+    width: 45%;
+  }
+  
+  .time {
+    font-weight: bold;
+  }
+  
+  .description {
+    margin-left: 20px;
+  }
 
+  .career-goals {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: #ccc 0px 0px 10px;
+  }
+  
+  .personal-goals {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:#000000 0px 0px 10px;
+  }
 
